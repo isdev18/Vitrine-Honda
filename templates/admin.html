@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Botão menu MOBILE -->
+    <button class="menu-toggle">☰</button>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Painel ADM</h2>
+
+        <ul class="menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Carrossel</a></li>
+            <li><a href="#">Vitrine</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Configurações</a></li>
+        </ul>
+
+        <a href="/" class="logout">Sair</a>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+        <h1>Bem-vindo, Administrador</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Carrossel</h3>
+                <p>Editar imagens, textos e links.</p>
+                <button>Gerenciar</button>
+            </div>
+
+            <div class="card">
+                <h3>Vitrine</h3>
+                <p>Atualizar modelos apresentados.</p>
+                <button>Gerenciar</button>
+            </div>
+
+            <div class="card">
+                <h3>Serviços</h3>
+                <p>Adicionar ou remover serviços.</p>
+                <button>Gerenciar</button>
+            </div>
+        </div>
+
+        <h2>Produtos da Vitrine</h2>
+        <table id="adminTable" class="admin-table"></table>
+    </main>
+
+    <!-- JS -->
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
